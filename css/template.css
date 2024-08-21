@@ -1,0 +1,45 @@
+/*Carrega a fonte "roboto" do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Carrega a biblioteca de icones do Font Awesome*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+/*Reset para que o CSS seja o mesmo em todos os navegadores moderno*/
+* {
+    /*Reset das caixas*/
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body,
+#wrap {
+    /*Reset do elementos raiz do navegador*/
+    position: relative;
+    width: 100%;
+    /*altura*/
+    height: 100%;
+    /*largura*/
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    /*fonte padrão do site*/
+    font-family: Roboto sans-serif;
+
+    /*Tamanho da fonte -> 16px => 1rem*/
+    font-size: 16px;
+}
+
+body {
+    background-color: rgba(238, 245, 252, .6);
+    background-image: url('/img/snakebg2.png');
+}
+
+#wrap {
+    max-width: 1024px; /*Largura máxima*/
+    min-width: 280px;  /*Largura mínima*/
+    margin: auto; /* Centralizado*/
+}
