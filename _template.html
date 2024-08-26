@@ -22,39 +22,85 @@
 
         <!--Cabeçalho -->
         <header>
-            <div>
+            <!--Ao click no logo, direciona para a página inicial -->
+            <a href="/" title="Clique para acessar a página inicial">
                 <img src="/img/logo.png" alt="Logo do Site">
                 <h1>Site <small>de teste do front_end</small></h1>
                 <!--Tag <small> reduz em 25% o tamanho do texto em referência ao texto Principal-->
-            </div>
+            </a>
 
             <!--Formulário de busca-->
             <form action="/search.html" method="get">
-                <input type="search" name="q" id="headerSearch">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass" fa-fw></i></button>
+                <input type="search" name="q" id="headerSearch" placeholder="Digite para pesquisar">
+                <button type="submit" title="Clique para iniciar a busca"><i class="fa-solid fa-magnifying-glass" fa-fw></i></button>
             </form>
 
         </header>
 
         <!--Menu Principal-->
-        <nav></nav>
+        <nav>
+            <a href="/" title="Página Inical">
+                <i class="fa-solid fa-house fa-fw"></i>
+                <span>Início</span>
+            </a>
+            <a href="/contacts.html" title="Entre em contato conosco">
+                <i class="fa-solid fa-headset fa-fw"></i> 
+                <span>Contatos</span>   
+            </a>
+            <a href="/about.html" title="Informações sobre quem somos">
+                <i class="fa-solid fa-circle-info fa-fw"></i>
+                <span>Sobre</span>
+            </a>
+        </nav>
 
         <!-- Conteúdo principal -->
         <main>
             <!-- Conteúdo da página -->
             <article>
-                <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
+                <h2>Conteúdo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
                     qui in fuga voluptatum unde ipsam. Atque, voluptas fugiat ullam sapiente recusandae, dolores
-                    molestias culpa, quidem perspiciatis minima earum?</h1>
+                    molestias culpa, quidem perspiciatis minima earum?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil sequi debitis nulla sit soluta deserunt quod ea ullam beatae praesentium fugiat facilis doloremque optio ipsam, enim ut. Molestias, soluta hic.</p>
+                <img src="https://picsum.photos/id/1/200/300" alt="Foto aleatória">
 
             </article>
 
             <!-- Conteúdo auxiliar da página -->
-            <aside></aside>
+            <aside>
+                <h3>Auxiliar</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+            </aside>
         </main>
 
         <!--Rodapé-->
-        <footer>--Rodapé--</footer>
+        <footer class="site-title">
+            
+            <div class="footer_top">
+                <a href="/">Inicio</a>
+                <div>&copy; Copyright 2024 XYZ</div>
+                <a href="#top">Topo</a>
+            </div>
+
+            <div class="footer_botton">
+                <nav class="social">
+                    <a href="https://facebook"></a>
+                    <a href="https://insta"></a>
+                    <a href="https://x"></a>
+                    <a href="https://github"></a>
+                </nav>
+
+                <nav class="fast">
+                    <a href="/policyes.html"></a>
+                    <a href="/contacts.html"></a>
+                    <a href="/about.html"></a>
+                </nav>
+            </div>
+
+        </footer>
 
 
 
