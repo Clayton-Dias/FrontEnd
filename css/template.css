@@ -5,16 +5,39 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
 
 /*Reset para que o CSS seja o mesmo em todos os navegadores moderno*/
+
+/*Reset das caixas*/
 * {
-    /*Reset das caixas*/
     box-sizing: border-box;
     outline: none;
 }
 
+/**RESET de Formulários**/
+input,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .5rem .5rem;
+    border: none;
+}
+
+/*Reset dos links*/
+a {
+    text-decoration: none;
+    color: steelblue;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: orangered;
+}
+
+
+/*Reset do elementos raiz do navegador*/
+/*Para usar height = 100% */
 html,
 body,
 #wrap {
-    /*Reset do elementos raiz do navegador*/
     position: relative;
     width: 100%;
     /*altura*/
@@ -23,6 +46,8 @@ body,
     padding: 0;
     margin: 0;
 }
+
+
 
 html,
 body {
@@ -49,16 +74,24 @@ body {
     /*Largura mínima -> 320px - barra de rolagem*/
     margin: auto;
     /* Bloco Centralizado*/
+
+    /*Sticky Footer*/
+    display: flex;
+    flex-direction: column;
 }
 
-/**RESET de Formulários **/
-input,
-button {
-    font-family: inherit;
-    font-size: inherit;
-    padding: .5rem .5rem;
-    border: none;
+
+
+/* Estiliza filhos de #wrap */
+#wrap>header,
+#wrap>nav,
+#wrap>footer,
+#wrap>main>article,
+#wrap>main>aside {
+    margin: .25rem;
+    border-radius: .5rem;
 }
+
 
 /************************
 ****Cabeçalho(header)****
@@ -66,8 +99,8 @@ button {
 
 #wrap>header {
     background-color: rgb(186, 195, 238);
-    margin: .25rem;
-    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 #wrap>header>a {
@@ -134,10 +167,9 @@ button {
 ******Menu Principal(nav)******
 *******************************/
 #wrap>nav {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 9);
     display: flex;
     margin: .25rem;
-    border-radius: .5rem;
     align-items: center;
     justify-content: flex-end;
 }
@@ -149,15 +181,16 @@ button {
     flex-direction: column;
     padding: 1rem .5rem;
     align-items: center;
-    transition: 2s; /*transition é o tempo de transição de estilo(CSS)*/
+    transition: 2s;
+    /*transition é o tempo de transição de estilo(CSS)*/
 }
 
-#wrap>nav a:hover{
+#wrap>nav a:hover {
     color: rgb(223, 121, 25);
 }
 
 /*Link de Início*/
-#wrap>nav a:first-child{
+#wrap>nav a:first-child {
     margin-right: auto;
 }
 
@@ -175,17 +208,132 @@ button {
 ******Conteúdo Principal(main)****
 **********************************/
 
-#wrap>main{
+#wrap>main {
+    /*Sticky Footer*/
+    flex-grow: 1;
     display: flex;
-    
+    flex-direction: column;
+}
+
+#wrap>main>article {
+    background-color: rgba(255, 255, 255, 9);
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+#wrap>main>article>h2:first-child,
+#wrap>main>aside>h3:first-child {
+    margin: 0;
+}
+
+#wrap>main>aside {
+    background-color: rgb(204, 204, 204);
+    padding: 1rem;
 }
 
 
 
-/*********************************
-******Rodapé(footer)****
-**********************************/
+/*************************
+******Rodapé(footer)******
+**************************/
 
-#wrap>footer{
+#wrap>footer {
+    /*display: flex;*/
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#wrap>footer a {
+    color: white;
+}
+
+#wrap>footer a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+.footer_top {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dotted gray;
+}
+
+.footer_top a i {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.footer_top div {
+    font-size: small;
+}
+
+
+.footer_botton {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+.footer_botton nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.8;
+}
+
+.footer_botton nav h4 {
+    margin: 0;
+}
+
+.footer_botton nav a {
+    margin-left: .8rem;
+}
+
+
+/********************************************
+ ***** Resoluções de 640 pixels ou mais *****
+ *****      Usando Media Queries        *****
+ ********************************************/
+
+@media screen and (min-width: 575px) {
+
+    /*Altera o cabeçlho*/
+    #wrap>header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /*Altera o menu principal*/
+    #wrap>nav a {
+        flex-direction: row;
+
+    }
+
+    #wrap>nav a i {
+        font-size: 1.3rem;
+        margin: 0 .4rem 0 0;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    /*Altera o main*/
+    #wrap>main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #wrap>main>aside {
+        min-width: 12.5rem;
+        max-width: 12.5rem;
+    }
+
+}
+
+@media screen and (min-width: 425px) {
+    .footer_top div {
+        font-size: 1rem;
+    }
 }
