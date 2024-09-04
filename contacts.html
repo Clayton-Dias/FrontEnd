@@ -8,12 +8,13 @@
 
     <!-- Carrega o CSS do tema do site-->
     <link rel="stylesheet" href="/css/template.css">
+    <link rel="stylesheet" href="/css/contacts.css">
 
     <!--Gera o icone da página, que vai o lado o título da página -->
     <link rel="shortcut icon" href="/img/logo.png">
 
     <!-- Título da Página-->
-    <title>Site - Teste</title>
+    <title>Site - Faça contato</title>
 </head>
 
 <body>
@@ -59,32 +60,47 @@
         <main>
             <!-- Conteúdo da página -->
             <article>
-                <h2>Nome do artigo</h2>
 
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
-                    qui in fuga voluptatum unde ipsam. Atque, voluptas fugiat ullam sapiente recusandae, dolores
-                    molestias culpa, quidem perspiciatis minima earum?
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil sequi debitis nulla sit soluta
-                    deserunt quod ea ullam beatae praesentium fugiat facilis doloremque optio ipsam, enim ut. Molestias,
-                    soluta hic.</p>
-                <img src="https://picsum.photos/id/1/200/300" alt="Foto aleatória">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
-                    qui in fuga voluptatum unde ipsam. Atque, voluptas fugiat ullam sapiente recusandae, dolores
-                    molestias culpa, quidem perspiciatis minima earum?
-                </p>
+                <h2>Faça contato</h2>
+                <p> Preencha os campos abaixo para entrar em contato com nossa equipe <strong>do Site</strong></p>
+                <p class="center red">* Campos obrigatórios</p>
+                <form action="#" method="post">
+
+                    <p>
+                        <label for="fieldName">Seu nome:</label>
+                        <input type="text" name="name" id="fieldName" required minlength="3">
+                    </p>
+
+                    <p>
+                        <label for="fieldEmail">Seu email:</label>
+                        <input type="email" name="email" id="fieldEmail" required>
+                    </p>
+
+                    <p>
+                        <label for="fieldSubject">Assunto:</label>
+                        <input type="text" name="subject" id="fieldSubject" required minlength="5">
+                    </p>
+
+                    <p>
+                        <label for="fieldMessage">Mensagem:</label>
+                        <textarea name="message" id="fieldMessage" required minlength="5"></textarea>
+                    </p>
+                    <p>
+                        <button type="submit"><i class="fa-solid fa-share fa-fw"></i> Enviar</button>
+                    </p>
+
+
+                </form>
 
             </article>
 
-            <!-- Conteúdo auxiliar da página -->
+            <!-- Conteúdo auxiliar da página 
             <aside>
                 <h3>Veja também</h3>
 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-            </aside>
+            </aside> -->
 
         </main>
 
