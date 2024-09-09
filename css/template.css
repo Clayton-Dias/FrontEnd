@@ -14,11 +14,9 @@
 
 /**RESET de Formulários**/
 input,
-button {
+button, textarea {
     font-family: inherit;
     font-size: inherit;
-    padding: .5rem .5rem;
-    border: none;
 }
 
 /*Reset dos links*/
@@ -122,7 +120,7 @@ body {
 
 #wrap>header small {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: normal;
     font-weight: normal;
     color: white;
@@ -132,8 +130,20 @@ body {
 
 #wrap>header img {
     display: block;
-    height: 5rem;
-    margin: .05rem;
+    height: 3rem;
+    margin: .5rem;
+}
+
+/*Botão do menu principal em mobile*/
+#toggleMenu{
+    margin-left: auto;
+    margin-right: .5rem;
+    cursor: pointer;
+}
+
+#toggleMenu i{
+    color: white;
+    font-size: 2rem;    
 }
 
 /*Formuário de busca no header #wrap*/
@@ -148,6 +158,8 @@ body {
     border-radius: .3rem 0 0 .3rem;
     background-color: white;
     text-align: center;
+    padding: .5rem .25rem;
+    border: none;
 }
 
 #wrap>header form button {
@@ -155,6 +167,7 @@ body {
     background-color: rgb(206, 204, 204);
     padding-left: .25rem;
     padding-right: .25rem;
+    border: none;
 }
 
 #wrap>header form button:hover {
@@ -170,17 +183,19 @@ body {
     background-color: rgba(0, 0, 0, 9);
     display: flex;
     margin: .25rem;
-    align-items: center;
-    justify-content: flex-end;
+    /*align-items: center;*/
+    flex-direction: column;
+    position: absolute;
+    top: 9rem;
+    z-index: 1000;
 }
 
 #wrap>nav a {
     color: white;
     text-decoration: none;
     display: flex;
-    flex-direction: column;
-    padding: 1rem .5rem;
-    align-items: center;
+    padding: .7rem;
+    /*align-items: center;*/
     transition: 2s;
     /*transition é o tempo de transição de estilo(CSS)*/
 }
@@ -190,12 +205,13 @@ body {
 }
 
 /*Link de Início*/
-#wrap>nav a:first-child {
+/*#wrap>nav a:first-child {
     margin-right: auto;
-}
+}*/
 
 #wrap>nav i {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-right: .5rem;
     margin-bottom: .5rem;
 }
 
@@ -349,4 +365,14 @@ body {
 
 .red {
     color: red;
+}
+
+
+#fumaca{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .9);
+    top: 9rem;
+    z-index: 100;
 }
