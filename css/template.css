@@ -14,7 +14,8 @@
 
 /**RESET de Formulários**/
 input,
-button, textarea {
+button,
+textarea {
     font-family: inherit;
     font-size: inherit;
 }
@@ -135,15 +136,15 @@ body {
 }
 
 /*Botão do menu principal em mobile*/
-#toggleMenu{
+#toggleMenu {
     margin-left: auto;
     margin-right: .5rem;
     cursor: pointer;
 }
 
-#toggleMenu i{
+#toggleMenu i {
     color: white;
-    font-size: 2rem;    
+    font-size: 2rem;
 }
 
 /*Formuário de busca no header #wrap*/
@@ -198,6 +199,7 @@ body {
     /*align-items: center;*/
     transition: 2s;
     /*transition é o tempo de transição de estilo(CSS)*/
+    border-bottom: 1px solid white;
 }
 
 #wrap>nav a:hover {
@@ -311,28 +313,39 @@ body {
  *****      Usando Media Queries        *****
  ********************************************/
 
-@media screen and (min-width: 575px) {
+@media screen and (min-width: 640px) {
 
-    /*Altera o cabeçlho*/
+    /*Altera o cabeçalho*/
     #wrap>header {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-    }
+    }   
 
-    /*Altera o menu principal*/
-    #wrap>nav a {
+    #wrap>nav {
         flex-direction: row;
-
+        justify-content: flex-end;
+        position: initial;
+        width: auto;
     }
 
+    #wrap>nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        display: flex;
+        padding: 1rem;
+        transition: .2s;
+        border-bottom: 1px dotted grey;
+    }
+
+    #wrap>nav a:first-child {
+        margin-right: auto;
+    }
+    
     #wrap>nav a i {
         font-size: 1.3rem;
         margin: 0 .4rem 0 0;
     }
-}
-
-@media screen and (min-width: 640px) {
 
     /*Altera o main*/
     #wrap>main {
@@ -346,6 +359,10 @@ body {
         max-width: 12.5rem;
     }
 
+    #toggleMenu,
+    #menuSmoke {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 425px) {
@@ -355,11 +372,12 @@ body {
 }
 
 
+
 /*******************************
 ******Estilos de uso geral******
 ********************************/
 
-.center{
+.center {
     text-align: center;
 }
 
@@ -368,7 +386,7 @@ body {
 }
 
 
-#fumaca{
+#menuSmoke {
     position: absolute;
     width: 100%;
     height: 100%;

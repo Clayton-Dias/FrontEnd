@@ -9,14 +9,12 @@
     <!-- Carrega o CSS do tema do site-->
     <link rel="stylesheet" href="/css/template.css">
 
-    <!-- Carrega o CSS deste página de contatos-->
-    <link rel="stylesheet" href="/css/contacts.css">
-
     <!--Gera o icone da página, que vai o lado o título da página -->
     <link rel="shortcut icon" href="/img/logo.png">
 
     <!-- Título da Página-->
-    <title>Site - Faça contato</title>
+    <title>Site - Teste</title>
+
      
 </head>
 
@@ -29,12 +27,14 @@
             <!--Ao click no logo, direciona para a página inicial -->
             <a href="/" title="Clique para acessar a página inicial">
                 <img src="/img/logo.png" alt="Logo do Site">
-                <h1>Site <small>para novatos, como eu.</small></h1>
-                <!--Tag <small> reduz em 25% o tamanho do texto em referência ao texto Principal-->
-                
+                <h1>
+                    Site 
+                    <small>para novatos, como eu.</small> <!--Tag <small> reduz em 25% o tamanho do texto em referência ao texto Principal-->
+                </h1>
+
                 <span id="toggleMenu">
                     <i class="fa-solid fa-bars fa-fw"></i>
-                </span>    
+                </span> 
             </a>
 
             <!--Formulário de busca-->
@@ -67,62 +67,31 @@
         <main>
             <!-- Conteúdo da página -->
             <article>
+                <h2>Politícas de privacidade</h2>
 
-                <h2>Faça contato</h2>
-                <p> Preencha os campos abaixo para entrar em contato com nossa equipe <strong>do site</strong></p>
-                <p class="center red">* Campos obrigatórios</p>
-                <form action="#" method="post">
-
-                    <p>
-                        <label for="fieldName">Seu nome:</label>
-                        <input type="text" name="name" id="fieldName" required minlength="3">
-                    </p>
-
-                    <p>
-                        <label for="fieldEmail">Seu email:</label>
-                        <input type="email" name="email" id="fieldEmail" required>
-                    </p>
-
-                    <p>
-                        <label for="fieldSubject">Assunto:</label>
-                        <input type="text" name="subject" id="fieldSubject" required minlength="5">
-                    </p>
-
-                    <p>
-                        <label for="fieldMessage">Mensagem:</label>
-                        <textarea name="message" id="fieldMessage" required minlength="5"></textarea>
-                    </p>
-                    <p>
-                        <button type="submit"><i class="fa-solid fa-share fa-fw"></i> Enviar</button>
-                        <small>&larr; Clique somente uma vez</small>
-                    </p>
-
-
-                </form>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
+                    qui in fuga voluptatum unde ipsam. Atque, voluptas fugiat ullam sapiente recusandae, dolores
+                    molestias culpa, quidem perspiciatis minima earum?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil sequi debitis nulla sit soluta
+                    deserunt quod ea ullam beatae praesentium fugiat facilis doloremque optio ipsam, enim ut. Molestias,
+                    soluta hic.</p>
+                <img src="https://picsum.photos/id/1/200/300" alt="Foto aleatória">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio harum, consequuntur
+                    qui in fuga voluptatum unde ipsam. Atque, voluptas fugiat ullam sapiente recusandae, dolores
+                    molestias culpa, quidem perspiciatis minima earum?
+                </p>
 
             </article>
 
             <!-- Conteúdo auxiliar da página -->
             <aside>
-                <h3><i class="fa-solid fa-plus fa-fw"></i> Contatos</h3>
+                <h3>Veja também</h3>
 
-                <p>Acesse nossas redes sociais para mais.</p>
-
-                <div>
-                    <a href="https://facebook.com" target="_blank">
-                        <i class="fa-brands fa-facebook fa-fw fa-3x" style=" color: #1877f2;" ></i>
-                    </a>
-                    <a href="https://x.com" target="_blank">
-                        <i class="fa-brands fa-x-twitter fa-fw fa-3x" style="color: #14171a;"></i>
-                    </a>
-                    <a href="https://github.com" target="_blank">
-                        <i class="fa-brands fa-github fa-fw fa-3x" style="color: #6e5494;"></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" style="color: #c13584;">
-                        <i class="fa-brands fa-square-instagram fa-fw fa-3x"></i>
-                    </a>
-                </div>
-
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
             </aside>
 
         </main>
@@ -179,10 +148,12 @@
         </footer>
 
         &nbsp;
-        <div id="menuSmoke"></div>
+        <hr style="margin: .5rem; border: 1px solid transparent">
+    </div>
+
+    <div id="menuSmoke">
 
     </div>
-    
     <!--Javascript sempre no final -->
     <!--Código Javascript sempre dentro da tag <script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
